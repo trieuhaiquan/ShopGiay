@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="account-details">
+            <div class="col-lg-6 col-md-6 col-sm-6 xs-res-mrbtm">
+                <form method="post" class="create-account-form" action="#">
+                    <h1 class="heading-title">Create an account</h1>
+                    <p class="form-row">
+                        <label>Email address</label>
+                        <input type="email" placeholder="Your Email" name="email" ng-model="email" required>
+                        <p class="alert alert-danger" ng-show="login.email.$error.email">Your email is invalid.</p>
+                    </p>
+                    <p class="form-row">
+                        <label>Password</label>
+                        <input type="password" placeholder="Your password" name="password" ng-model="password" ng-minlength='6' required>
+                        <p class="alert alert-danger" ng-show="login.password.$error.minlength || form.password.$invalid">
+                            Your password must be at least 6 characters.</p>
+                    </p>
+                    <div class="submit">					
+                        <button name="submitcreate" id="submitcreate" type="submit" class="">
+                            <span>
+                                <i class="fa fa-user left"></i>
+                                Create an account
+                            </span>
+                        </button>
+                    </div>		
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <form method="post" class="login-form" action="#" name="login">
+                    <h1 class="heading-title">Already registered?</h1>
+                    <p class="form-row">
+                        <label>Email address</label>
+                        <input type="email" placeholder="Your Email" name="email" ng-model="email" required>
+                        <p class="alert alert-danger" ng-show="login.email.$error.email">Your email is invalid.</p>
+                    </p>
+                    <p class="form-row">
+                        <label>Password</label>
+                        <input type="password" placeholder="Your password" name="password" ng-model="password" ng-minlength='6' required>
+                        <p class="alert alert-danger" ng-show="login.password.$error.minlength || form.password.$invalid">
+                            Your password must be at least 6 characters.</p>
+                    </p>
+                    <p class="lost-password form-group"><a rel="nofollow" href="#">Forgot your password?</a></p>
+                    <p class="submit">				
+                        <button class="" name="SubmitLogin" id="submitlogin" type="submit">
+                            <span><i class="fa fa-lock"></i>Sign In</span>
+                        </button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
