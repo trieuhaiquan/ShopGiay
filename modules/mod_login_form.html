@@ -2,36 +2,36 @@
     <div class="row">
         <div class="account-details">
             <div class="col-lg-6 col-md-6 col-sm-6 xs-res-mrbtm">
-                <form method="post" class="create-account-form" action="#">
-                    <h1 class="heading-title">Create an account</h1>
-                    <p class="form-row">
-                        <label>Email address</label>
-                        <input type="email" placeholder="Your Email" name="email" ng-model="email" required>
-                        <p class="alert alert-danger" ng-show="login.email.$error.email">Your email is invalid.</p>
-                    </p>
-                    <p class="form-row">
-                        <label>Password</label>
-                        <input type="password" placeholder="Your password" name="password" ng-model="password" ng-minlength='6' required>
-                        <p class="alert alert-danger" ng-show="login.password.$error.minlength || form.password.$invalid">
-                            Your password must be at least 6 characters.</p>
-                    </p>
-                    <div class="submit">					
-                        <button name="submitcreate" id="submitcreate" type="submit" class="">
-                            <span>
-                                <i class="fa fa-user left"></i>
-                                Create an account
-                            </span>
-                        </button>
-                    </div>		
-                </form>
-            </div>
+							<form method="post" class="create-account-form" action="#" name="register">
+								<h1 class="heading-title">Create an account</h1>
+								<p class="form-row">
+                                <label>Email address</label>
+                                <input type="email" placeholder="Your Email" name="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/" ng-model="email_rg" required>
+                                <p class="alert alert-danger" ng-show="register.email.$error.pattern || form.email_rg.$invalid">Your email is invalid.</p>
+                                </p>
+                                <p class="form-row">
+                                    <label>Password</label>
+                                    <input type="password" placeholder="Your password" name="password" ng-model="password_rg" ng-minlength='6' required>
+                                    <p class="alert alert-danger" ng-show="register.password.$error.minlength || form.password_rg.$invalid">
+                                        Your password must be at least 6 characters.</p>
+                                </p>
+								<div class="submit">					
+									<button name="submitcreate" id="submitcreate" type="submit" class="">
+										<span>
+											<i class="fa fa-user left"></i>
+											Create an account
+										</span>
+									</button>
+								</div>		
+							</form>
+						</div>
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <form method="post" class="login-form" action="#" name="login">
                     <h1 class="heading-title">Already registered?</h1>
                     <p class="form-row">
                         <label>Email address</label>
-                        <input type="email" placeholder="Your Email" name="email" ng-model="email" required>
-                        <p class="alert alert-danger" ng-show="login.email.$error.email">Your email is invalid.</p>
+                        <input type="email" placeholder="Your Email" name="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/" ng-model="email" required>
+                        <p class="alert alert-danger" ng-show="login.email.$error.pattern || form.email.$invalid">Your email is invalid.</p>
                     </p>
                     <p class="form-row">
                         <label>Password</label>
